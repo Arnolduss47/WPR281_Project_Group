@@ -193,3 +193,209 @@ tr:hover {
     border-radius: 6px;
     font-size: 12px;
 }
+
+#loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+}
+
+#loginPage .card {
+    width: 100%;
+    max-width: 200%;
+}:root {
+    --main-blue: #4fa3d1;
+    --dark-blue: #2c6f91;
+    --light-bg: #eef3f7;
+}
+
+body {
+    background-color: var(--light-bg);
+    font-family: Arial;
+}
+
+.custom-nav {
+    background-color: var(--dark-blue);
+}
+
+.custom-btn {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.app-layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: var(--dark-blue);
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.menu-title {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+.menu-item {
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: var(--main-blue);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-actions {
+    display: flex;
+    gap: 10px;
+}
+
+tr:hover {
+    background: #f5f5f5;
+}
+
+
+.person-card {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.person-card:hover {
+    background: #f0f0f0;
+}
+
+
+.table-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+tr {
+    transition: 0.2s;
+}
+
+tr:hover {
+    background: #eef6fb;
+    cursor: pointer;
+}
+
+
+.sidebar {
+    background: linear-gradient(180deg, #2c6f91, #1b4e68);
+}
+
+
+.top-bar {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+
+.custom-btn {
+    background: linear-gradient(135deg, #4fa3d1, #2c6f91);
+    border: none;
+}
+
+.top-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-box {
+    width: 200px;
+}
+
+.filter-box {
+    width: 150px;
+}
+
+.new-btn {
+    white-space: nowrap;
+}
+
+
+#peopleList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.person-card {
+    background: white;
+    border-radius: 14px;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.person-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.person-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.person-email {
+    font-size: 13px;
+    color: gray;
+}
+
+
+.person-actions {
+    display: flex;
+    gap: 8px;
+}
+
+
+.btn-edit {
+    background: #ffc107;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
