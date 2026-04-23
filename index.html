@@ -45,7 +45,9 @@
 
             <p class="menu-title">MANAGE</p>
             <div class="menu-item" onclick="showPeople()">People</div>
+            <div class="menu-item" onclick="showProjects()">Projects</div>
         </div>
+        
 
         <div class="main-content">
 
@@ -179,8 +181,23 @@
             <input id="pName" class="form-control mb-2" placeholder="Name">
             <input id="pSurname" class="form-control mb-2" placeholder="Surname">
             <input id="pEmail" class="form-control mb-2" placeholder="Email">
+            <input id="pUsername" class="form-control mb-2" placeholder="Username"> 
             <button class="btn btn-success" onclick="savePerson()">Save</button>
         </div>
+    </div>
+
+    <!-- PROJECTS PAGE -->
+    <div id="projectsPage" style="display:none;" class="container mt-4">
+        <h3>Projects</h3>
+
+        <ul id="projectList" class="list-group mb-3"></ul>
+
+        <div class="d-flex gap-2 mt-2">
+            <input type="text" id="newProjectName" class="form-control" placeholder="New project name">
+            <button class="btn custom-btn" onclick="addNewProject()">Add</button>
+        </div>
+
+        <button class="btn btn-secondary mt-3" onclick="showDashboard()">Back</button>
     </div>
 
     <!-- VIEW -->
@@ -214,12 +231,15 @@
                 <option value="Crash on launch">Crash on launch</option>
             </select>
             <textarea class="form-control mb-2" id="desc" placeholder="Description"></textarea>
-
+              <label class="form-label">Reported by</label>
+             <select class="form-control mb-2" id="reporter">
+              </select>
+            <label for="form-label">Project type</label>
             <select class="form-control mb-2" id="project">
-                <option value="Website">Website</option>
-                <option value="Mobile App">Mobile App</option>
+                
             </select>
-
+             
+            <label class="form-label">Assign issue to...</label>
             <select class="form-control mb-2" id="assigned">
                 <option value="Naledi">Naledi</option>
                 <option value="Angel">Angel</option>
@@ -227,12 +247,15 @@
                 <option value="Tshiamo">Tshiamo</option>
             </select>
 
+            <label class="form-label">Status of the issue</label>
             <select class="form-control mb-2" id="status">
                 <option value="open">Open</option>
                 <option value="resolved">Resolved</option>
                 <option value="overdue">Overdue</option>
             </select>
 
+
+           <label class="form-label">Priority of the issue</label>
             <select class="form-control mb-2" id="priority">
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
@@ -245,10 +268,14 @@
             <label class="form-label">Target Resolution Date</label>
             <input type="date" id="targetDate" class="form-control mb-2">
 
-            <textarea id="resolutionSummary" class="form-control mb-2" placeholder="Resolution Summary"
-                style="display:none;"></textarea>
-
+            <label id="resolvedDateLabel" class="form-label" style="display:none;">Resolved Date</label>
             <input type="date" id="resolvedDate" class="form-control mb-2" style="display:none;">
+
+
+            <textarea id="resolutionSummary" class="form-control mb-2" placeholder="Resolution Summary"
+                style="display:none;">
+            </textarea>
+
 
             <button class="btn custom-btn">Save</button>
             <button type="button" class="btn btn-secondary" onclick="showDashboard()">Cancel</button>
